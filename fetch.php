@@ -31,7 +31,7 @@ function fetchData($conn, $query,$type = 'default')
 }
 
 // Function to create and set price objects
-function createprice($tieude, $value)
+function createPrice($tieude, $value)
 {
     $price = new stdClass();
     $price->tieude = $tieude;
@@ -55,9 +55,9 @@ $arrayContent = fetchData($conn, "SELECT noidung AS tieude, noidung AS value FRO
 $arrayPhone = fetchData($conn, "SELECT nameimg AS img, loai AS tieude, loai AS value FROM img","loai");
 
 // Create price objects
-$price = createprice('nhỏ hơn 5 triệu', 'duoi5trieu');
-$priceFirst = createprice('từ 5 tới 10 triệu', 'tu5toi10trieu');
-$priceSecond = createprice('trên 10 triệu', 'tren10trieu');
+$price = createPrice('nhỏ hơn 5 triệu', 'duoi5trieu');
+$priceFirst = createPrice('từ 5 tới 10 triệu', 'tu5toi10trieu');
+$priceSecond = createPrice('trên 10 triệu', 'tren10trieu');
 
 // Combine all data into a single object
 $object = new stdClass();
