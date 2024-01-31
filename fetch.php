@@ -12,6 +12,7 @@ function fetchData($conn, $query,$type = 'default')
     $dataArray = array();
     if (mysqli_num_rows($result) > 0) {
         while ($row = mysqli_fetch_array($result)) {
+            // logic add type phone
             if($type === "loai"){
                 $dataObject = new stdClass();
                 $dataObject->img = $row['img'];
