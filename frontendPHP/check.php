@@ -1,6 +1,4 @@
-<script>
-    
-</script>
+
 <?php
 // Database connection parameters
 
@@ -15,7 +13,17 @@ $username = $_POST['username'];
 $password = $_POST['password'];
 error_reporting(0);
 if(strlen($password) < 8 || strlen($password) > 16){
-    echo "sai quy định password từ 8 tới 16 ký tự". $conn->error;
+    ?>
+    <script>
+     var choice = confirm("<?php echo "mật khẩu không đúng định dạng từ 8 tới 16 ký tự"; ?>");
+     if(choice == 1){
+        location.href = 'http://localhost/cuahangdienthoai/shoppingphp/frontendPHP/register.php';
+     }else{
+        location.href = 'http://localhost/cuahangdienthoai/shoppingphp/frontendPHP/register.php';
+     }
+    </script>
+    <?php
+   
     $conn->close();
     die();
 }

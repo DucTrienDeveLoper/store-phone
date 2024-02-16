@@ -1,20 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<?php include "layout/header.php" ?>
-
-
-<body style="background-color: white;">
-
-    
-
-<!-- End mainmenu area                      -->
-<!-- Slider -->
-
 <?php
-$hang = 'hang';
-$nhucau = 'nhucau';
-// session_start();
+session_start();
 $conn = mysqli_connect("localhost", "root", "", "mobile", "3307") or die();
 if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
@@ -24,13 +9,13 @@ if (isset($_SESSION['USER_NAME'])) {
     $Username = $_SESSION['USER_NAME'];
     echo $Username;
 }
-
+require "inc/header.php";
 
 ?>
-<!-- End mainmenu area                      -->
-<!-- Slider -->
 
 
+<a href="logout.php">logout</a>
+<a href="frontendPHP/login.php">login</a>
 <div class="slider-area">
 
     <div class="block-slider block-slider4">
@@ -60,7 +45,6 @@ if (isset($_SESSION['USER_NAME'])) {
         </ul>
     </div>
 </div>
-
 
 
 
@@ -111,7 +95,7 @@ if (isset($_SESSION['USER_NAME'])) {
     </div>
 </div>
 
-<div class="brands-area">
+<!-- <div class="brands-area">
     <div class="zigzag-bottom"></div>
     <div class="container">
         <div class="row">
@@ -131,7 +115,7 @@ if (isset($_SESSION['USER_NAME'])) {
             </div>
         </div>
     </div>
-</div>
+</div> -->
 <!-- End brands area -->
 
 
@@ -288,64 +272,7 @@ if (isset($_SESSION['USER_NAME'])) {
 </div>
 <!-- End product widget area -->
 
-<div class="footer-top-area">
-    <div class="zigzag-bottom"></div>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-about-us">
-                    <h2>u<span>Stora</span></h2>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis sunt id doloribus vero quam laborum quas alias dolores blanditiis iusto consequatur, modi aliquid eveniet eligendi iure eaque ipsam iste, pariatur omnis sint! Suscipit, debitis, quisquam. Laborum commodi veritatis magni at?</p>
-                    <div class="footer-social">
-                        <a href="#" target="_blank"><i class="fa fa-facebook"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-twitter"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-youtube"></i></a>
-                        <a href="#" target="_blank"><i class="fa fa-linkedin"></i></a>
-                    </div>
-                </div>
-            </div>
 
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-menu">
-                    <h2 class="footer-wid-title">User Navigation </h2>
-                    <ul>
-                        <li><a href="#">My account</a></li>
-                        <li><a href="#">Order history</a></li>
-                        <li><a href="#">Wishlist</a></li>
-                        <li><a href="#">Vendor contact</a></li>
-                        <li><a href="#">Front page</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-menu">
-                    <h2 class="footer-wid-title">Categories</h2>
-                    <ul>
-                        <li><a href="#">Mobile Phone</a></li>
-                        <li><a href="#">Home accesseries</a></li>
-                        <li><a href="#">LED TV</a></li>
-                        <li><a href="#">Computer</a></li>
-                        <li><a href="#">Gadets</a></li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="col-md-3 col-sm-6">
-                <div class="footer-newsletter">
-                    <h2 class="footer-wid-title">Newsletter</h2>
-                    <p>Sign up to our newsletter and get exclusive deals you wont find anywhere else straight to your inbox!</p>
-                    <div class="newsletter-form">
-                        <form action="#">
-                            <input type="email" placeholder="Type your email">
-                            <input type="submit" value="Subscribe">
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- End footer top area -->
 <div class="modal fade" id="login" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
     <div class="modal-dialog" style="width: 800px;">
@@ -454,26 +381,7 @@ if (isset($_SESSION['USER_NAME'])) {
         </div>
     </div>
 </div>
-<div class="footer-bottom-area">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8">
-                <div class="copyright">
-                    <p>&copy; 2015 uCommerce. All Rights Reserved. <a href="http://www.freshdesignweb.com" target="_blank">freshDesignweb.com</a></p>
-                </div>
-            </div>
 
-            <div class="col-md-4">
-                <div class="footer-card-icon">
-                    <i class="fa fa-cc-discover"></i>
-                    <i class="fa fa-cc-mastercard"></i>
-                    <i class="fa fa-cc-paypal"></i>
-                    <i class="fa fa-cc-visa"></i>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
 <!-- End footer bottom area -->
 <div id="loading" style="width: 100vw; overflow: hidden;height: 100vh; display: flex;justify-content: center;align-items: center;position: fixed;top:0px;left: 0px; background: white; display: none;z-index: 9999">
     <div class="lds-heart">
@@ -487,18 +395,18 @@ if (isset($_SESSION['USER_NAME'])) {
 <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
 
 <!-- jQuery sticky menu -->
-<script src="assets/js/owl.carousel.min.js"></script>
-<script src="assets/js/jquery.sticky.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.sticky.js"></script>
 
 <!-- jQuery easing -->
-<script src="assets/js/jquery.easing.1.3.min.js"></script>
+<script src="js/jquery.easing.1.3.min.js"></script>
 
 <!-- Main Script -->
-<script src="assets/js/main.js"></script>
+<script src="js/main.js"></script>
 
 <!-- Slider -->
-<script type="text/javascript" src="assets/js/bxslider.min.js"></script>
-<script type="text/javascript" src="assets/js/script.slider.js"></script>
+<script type="text/javascript" src="js/bxslider.min.js"></script>
+<script type="text/javascript" src="js/script.slider.js"></script>
 <script>
     let boloc = {
         hang: [],
@@ -550,12 +458,16 @@ if (isset($_SESSION['USER_NAME'])) {
         danhSachHienThi = await getHang()
         listKey = Object.keys(danhSachHienThi)
         console.log(listKey, "listkey")
-        console.log(danhSachHienThi,"danhsach");
+        console.log(danhSachHienThi, "danhsach trong api");
         hienThiDanhSach();
         showUIUX()
     }
 
-    console.log(danhSachHienThi, "danhsachhienthi")
+    
+
+   
+    
+
 
 
 
@@ -577,27 +489,29 @@ if (isset($_SESSION['USER_NAME'])) {
 
 
                 for (item = 0; item < danhsach.length; item++) {
-                    console.log(danhsach[item])
+                    console.log(danhsach[item],'handleurl')
                     handleData(key, danhsach[item])
+                    console.log(key,"key");
+                    console.log(danhsach[item],'danhsach')
                 }
 
             }
             handelefilter()
 
 
-            let url = 'http://localhost/php%20shopping/shoppingphp/customer/getds.php?modal=1&';
-            let hienthi = 'http://localhost/php%20shopping/shoppingphp/customer/index1.php?modal=2&';
+            let url = 'http://localhost/thegioididong/getds.php?modal=1&hang=iphone';
             for (indexKey = 0; indexKey < listKey.length; indexKey++) {
+                console.log(boloc,"bolocinfor") 
                 if (boloc[listKey[indexKey]].length > 0) {
                     url += listKey[indexKey] + '=' + boloc[listKey[indexKey]].join() + "&"
-                    hienthi += listKey[indexKey] + '=' + boloc[listKey[indexKey]].join() + "&"
-
                 }
             }
+            console.log(url,"url gửi đi")
             Api = url.slice(0, -1)
-            link = hienthi.slice(0, -1)
+            
             // console.log(link)
             // window.location.replace(link);
+            
 
             try {
                 let loading = document.querySelector("#loading");
@@ -612,7 +526,7 @@ if (isset($_SESSION['USER_NAME'])) {
                 // console.log(Api)
 
                 let danhsach = await res.json();
-                console.log(danhsach, "danhsachAPI", "APi trả về ")
+                console.log(Api, "danhsachAPI", "APi trả về ")
                 loading.style.display = "none";
 
                 // window.location.replace(link);8
@@ -842,7 +756,7 @@ if (isset($_SESSION['USER_NAME'])) {
 
 
     const handelefilter = async () => {
-        let link = 'http://localhost/php%20shopping/shoppingphp/customer/getsl.php?';
+        let link = 'http://localhost/thegioididong/getsl.php?';
         for (indexKey = 0; indexKey < listKey.length; indexKey++) {
             if (boloc[listKey[indexKey]].length > 0) {
                 link += listKey[indexKey] + '=' + boloc[listKey[indexKey]].join() + "&"
@@ -915,7 +829,7 @@ if (isset($_SESSION['USER_NAME'])) {
     }
 
     const html = (danhsach) => {
-        console.log(danhsach, "dad")
+        // console.log(danhsach, "dad")
         if (danhsach && danhsach.length > 0) {
             let hienthi = ""
             let produc = document.querySelector("#product-carousel");
@@ -927,7 +841,7 @@ if (isset($_SESSION['USER_NAME'])) {
 
 
             for (let index = 0; index < danhsach.length; index++) {
-                console.log(danhsach, "qrwer")
+                // console.log(danhsach, "qrwer")
                 hienthi += ` <div id="single-product" class="card-dienthoai" style="width:200px">
                                     <div  class="product-image">
                                          <img  id="single-product-img" src="${danhsach[index].img}"  alt="">
@@ -955,8 +869,8 @@ if (isset($_SESSION['USER_NAME'])) {
 
     btn.onclick = handleClickKetQua = async () => {
         // let  hienthiurl  = "http://localhost/php%20shopping/shoppingphp/customer/getds.php?"
-        let url = 'http://localhost/php%20shopping/shoppingphp/customer/getds.php?modal=1&';
-        let hienthi = 'http://localhost/php%20shopping/shoppingphp/customer/index1.php?modal=1&';
+        let url = 'http://localhost/thegioididong/getds?modal=1&';
+        let hienthi = 'http://localhost/thegioididong/index.php?modal=1&';
         for (indexKey = 0; indexKey < listKey.length; indexKey++) {
             if (boloc[listKey[indexKey]].length > 0) {
                 url += listKey[indexKey] + '=' + boloc[listKey[indexKey]].join() + "&"
@@ -973,15 +887,13 @@ if (isset($_SESSION['USER_NAME'])) {
 
 
     handlleUrl();
-    getshowfilter()
+    // getshowfilter()
     // hienThiDanhSach()
     showUIUX()
 
     // hienThiDanhSach()
     console.log(danhSachHienThi, "danhSachHienThi")
 </script>
-
-
 </body>
 
 </html>
