@@ -32,7 +32,7 @@
         <!-- Font Awesome -->
         <link rel="stylesheet" href="css/font-awesome.min.css">
         <!-- Font Awesome Stars-->
-        <link rel="stylesheet" href="css/fontawesome-stars.css">
+        <link rel="stylesheet" href="css/fontawesome-stars.css"> 
         <!-- Meanmenu CSS -->
         <link rel="stylesheet" href="css/meanmenu.css">
         <!-- owl carousel CSS -->
