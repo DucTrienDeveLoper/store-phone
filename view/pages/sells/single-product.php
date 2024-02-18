@@ -1,11 +1,11 @@
 <!doctype html>
 <html class="no-js" lang="zxx">
     
-<!-- single-product-normal31:50-->
+<!-- single-product31:30-->
 <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>Single Product Normal || limupa - Digital Products Store eCommerce Bootstrap 4 Template</title>
+        <title>Single Product || limupa - Digital Products Store eCommerce Bootstrap 4 Template</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <!-- Favicon -->
@@ -315,10 +315,10 @@
                                                     </li>
                                                     <li><a href="single-product.html">Single Products</a>
                                                         <ul>
-                                                            <li><a href="single-product.html">Single Product</a></li>
+                                                            <li class="active"><a href="single-product.html">Single Product</a></li>
                                                             <li><a href="single-product-sale.html">Single Product Sale</a></li>
                                                             <li><a href="single-product-group.html">Single Product Group</a></li>
-                                                            <li class="active"><a href="single-product-normal.html">Single Product Normal</a></li>
+                                                            <li><a href="single-product-normal.html">Single Product Normal</a></li>
                                                             <li><a href="single-product-affiliate.html">Single Product Affiliate</a></li>
                                                         </ul>
                                                     </li>
@@ -428,7 +428,7 @@
                     <div class="breadcrumb-content">
                         <ul>
                             <li><a href="index.html">Home</a></li>
-                            <li class="active">Single Product Normal</li>
+                            <li class="active">Single Product</li>
                         </ul>
                     </div>
                 </div>
@@ -443,25 +443,37 @@
                             <div class="product-details-left">
                                 <div class="product-details-images slider-navigation-1">
                                     <div class="lg-image">
-                                        <img src="images/product/large-size/1.jpg" alt="product image">
+                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/1.jpg" data-gall="myGallery">
+                                            <img src="images/product/large-size/1.jpg" alt="product image">
+                                        </a>
                                     </div>
                                     <div class="lg-image">
-                                        <img src="images/product/large-size/2.jpg" alt="product image">
+                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/2.jpg" data-gall="myGallery">
+                                            <img src="images/product/large-size/2.jpg" alt="product image">
+                                        </a>
                                     </div>
                                     <div class="lg-image">
-                                        <img src="images/product/large-size/3.jpg" alt="product image">
+                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/3.jpg" data-gall="myGallery">
+                                            <img src="images/product/large-size/3.jpg" alt="product image">
+                                        </a>
                                     </div>
                                     <div class="lg-image">
-                                        <img src="images/product/large-size/4.jpg" alt="product image">
+                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/4.jpg" data-gall="myGallery">
+                                            <img src="images/product/large-size/4.jpg" alt="product image">
+                                        </a>
                                     </div>
                                     <div class="lg-image">
-                                        <img src="images/product/large-size/5.jpg" alt="product image">
+                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/5.jpg" data-gall="myGallery">
+                                            <img src="images/product/large-size/5.jpg" alt="product image">
+                                        </a>
                                     </div>
                                     <div class="lg-image">
-                                        <img src="images/product/large-size/6.jpg" alt="product image">
+                                        <a class="popup-img venobox vbox-item" href="images/product/large-size/6.jpg" data-gall="myGallery">
+                                            <img src="images/product/large-size/6.jpg" alt="product image">
+                                        </a>
                                     </div>
                                 </div>
-                                <div class="product-details-thumbs slider-thumbs-1">
+                                <div class="product-details-thumbs slider-thumbs-1">                                        
                                     <div class="sm-image"><img src="images/product/small-size/1.jpg" alt="product image thumb"></div>
                                     <div class="sm-image"><img src="images/product/small-size/2.jpg" alt="product image thumb"></div>
                                     <div class="sm-image"><img src="images/product/small-size/3.jpg" alt="product image thumb"></div>
@@ -474,7 +486,7 @@
                         </div>
 
                         <div class="col-lg-7 col-md-6">
-                            <div class="product-details-view-content sp-normal-content pt-60">
+                            <div class="product-details-view-content pt-60">
                                 <div class="product-info">
                                     <h2>Today is a good day Framed poster</h2>
                                     <span class="product-details-ref">Reference: demo_15</span>
@@ -498,6 +510,16 @@
                                             </span>
                                         </p>
                                     </div>
+                                    <div class="product-variants">
+                                        <div class="produt-variants-size">
+                                            <label>Dimension</label>
+                                            <select class="nice-select">
+                                                <option value="1" title="S" selected="selected">40x60cm</option>
+                                                <option value="2" title="M">60x90cm</option>
+                                                <option value="3" title="L">80x120cm</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                     <div class="single-add-to-cart">
                                         <form action="#" class="cart-quantity">
                                             <div class="quantity">
@@ -511,8 +533,9 @@
                                             <button class="add-to-cart" type="submit">Add to cart</button>
                                         </form>
                                     </div>
-                                    <div class="product-additional-info">
-                                        <div class="product-social-sharing">
+                                    <div class="product-additional-info pt-25">
+                                        <a class="wishlist-btn" href="wishlist.html"><i class="fa fa-heart-o"></i>Add to wishlist</a>
+                                        <div class="product-social-sharing pt-25">
                                             <ul>
                                                 <li class="facebook"><a href="#"><i class="fa fa-facebook"></i>Facebook</a></li>
                                                 <li class="twitter"><a href="#"><i class="fa fa-twitter"></i>Twitter</a></li>
@@ -520,6 +543,34 @@
                                                 <li class="instagram"><a href="#"><i class="fa fa-instagram"></i>Instagram</a></li>
                                             </ul>
                                         </div>
+                                    </div>
+                                    <div class="block-reassurance">
+                                        <ul>
+                                            <li>
+                                                <div class="reassurance-item">
+                                                    <div class="reassurance-icon">
+                                                        <i class="fa fa-check-square-o"></i>
+                                                    </div>
+                                                    <p>Security policy (edit with Customer reassurance module)</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="reassurance-item">
+                                                    <div class="reassurance-icon">
+                                                        <i class="fa fa-truck"></i>
+                                                    </div>
+                                                    <p>Delivery policy (edit with Customer reassurance module)</p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <div class="reassurance-item">
+                                                    <div class="reassurance-icon">
+                                                        <i class="fa fa-exchange"></i>
+                                                    </div>
+                                                    <p> Return policy (edit with Customer reassurance module)</p>
+                                                </div>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
@@ -529,7 +580,7 @@
             </div>
             <!-- content-wraper end -->
             <!-- Begin Product Area -->
-            <div class="product-area pt-40">
+            <div class="product-area pt-35">
                 <div class="container">
                     <div class="row">
                         <div class="col-lg-12">
@@ -1191,7 +1242,7 @@
                                                 <img src="images/product/large-size/6.jpg" alt="product image">
                                             </div>
                                         </div>
-                                        <div class="product-details-thumbs slider-thumbs-1">                                        
+                                        <div class="product-details-thumbs slider-thumbs-1">
                                             <div class="sm-image"><img src="images/product/small-size/1.jpg" alt="product image thumb"></div>
                                             <div class="sm-image"><img src="images/product/small-size/2.jpg" alt="product image thumb"></div>
                                             <div class="sm-image"><img src="images/product/small-size/3.jpg" alt="product image thumb"></div>
@@ -1317,5 +1368,5 @@
         <script src="js/main.js"></script>
     </body>
 
-<!-- single-product-normal31:50-->
+<!-- single-product31:32-->
 </html>
