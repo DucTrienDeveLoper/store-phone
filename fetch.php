@@ -50,7 +50,7 @@ $arrayDisk = fetchData($conn, "SELECT CONCAT(dungluong, donvi) AS tieude, dunglu
 $arrayRam = fetchData($conn, "SELECT CONCAT(dungluong, donvi) AS tieude, dungluong AS value FROM luuluong WHERE loai = 'RAM'");
 
 // Query to get recommended content
-$arrayContent = fetchData($conn, "SELECT noidung AS tieude, noidung AS value FROM nhucau");
+$arrayContent = fetchData($conn, "SELECT nhucau AS tieude, nhucau AS value FROM nhucau");
 
 // Query to get image and type information
 $arrayPhone = fetchData($conn, "SELECT nameimg AS img, loai AS tieude, loai AS value FROM img","loai");

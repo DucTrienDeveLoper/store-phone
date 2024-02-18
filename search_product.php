@@ -1,61 +1,60 @@
 <?php
+function getSanPham($conn, $param_get)
+{
+    error_reporting(0);
+    $param = array_map('intval', explode(',', $_GET[$param_get]));
+    $param = implode(',', $param);
+
+    $query = "SELECT iddungluong FROM luuluong WHERE dungluong IN ($param)";
+    $result = mysqli_query($conn, $query);
+    $array_param = array();
+    if (mysqli_num_rows($result) > 0) {
+        while ($row = mysqli_fetch_array($result)) {
+            array_push($array_param, $row['iddungluong']);
+        }
+    }
+    $array_param = implode(',', $array_param);
+    $query_return = " $param_get IN ($array_param)";
+    return $query_return;
+}
+
+function getSanPhamByString($conn, $param_get)
+{   
+    $data = $_GET[$param_get];
+    $param_Array = explode(',', $data); // ['iphone', 'samsung']
+    $param = "'" . implode("','", $param_Array) . "'"; // 'iphone','samsung'
+    $sql = mysqli_query($conn, "SELECT id FROM $param_get WHERE $param_get IN ($param) ");
+    $array_paramstring = array(); 
+    if (mysqli_num_rows($sql) > 0) {
+        while ($row = mysqli_fetch_assoc($sql)) {
+            array_push($array_paramstring,$row['id']);
+        }
+    }
+    $array_paramstring = implode(',',$array_paramstring);
+    $query_return = "$param_get IN ($array_paramstring)";
+    return $query_return;
+}
+
 // Database connection
 $conn = mysqli_connect('localhost', 'root', '', 'mobile', '3307');
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-
-// Get 'ocung' from GET request and sanitize it
-$ocung = array_map('intval', explode(',', $_GET['ocung']));
-$ocung = implode(',', $ocung);
-var_dump($ocung);
-
-// Query to get 'iddungluong' from 'luuluong'
-$sql = "SELECT iddungluong FROM luuluong WHERE dungluong IN ($ocung)";
-$result = mysqli_query($conn, $sql);
-
-$array_data = array();
-if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        array_push($array_data, $row['iddungluong']);
-    }
+if(isset($_GET['ocung'])){
+    $query_ocung = getSanPham($conn, 'ocung');
 }
-$array_data = implode(',', $array_data);
-
-// Query to get 'sanpham' from 'sanpham'
-$query = "SELECT tensp AS sanpham FROM sanpham WHERE ocung IN ($array_data) ORDER BY hang";
-$result = mysqli_query($conn, $query);
-
-if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo $row['sanpham'] . "<br>";
-    }
+if(isset($_GET['dungluong'])){
+    $query_dungluong = getSanPham($conn, 'dungluong');
 }
-
-$ram = array_map('intval', explode(',', $_GET['ram']));
-$ram = implode(',', $ram);
-var_dump($ram);
-
-$query = "SELECT iddungluong FROM luuluong WHERE dungluong IN ($ram)";
-$result = mysqli_query($conn,$query);
-$array_ram = array();
-if(mysqli_num_rows($result)){
-    while($row = mysqli_fetch_assoc($result)){
-        array_push($array_ram,$row['iddungluong']);
-    }
+if(isset($_GET['hang'])){
+    $query_hang = getSanPhamByString($conn,'hang');
 }
-$array_ram = implode(',',$array_ram);
-// echo $array_ram;
-$query = "SELECT tensp AS sanpham FROM sanpham WHERE dungluong IN ($array_ram) ORDER BY hang";
-$result = mysqli_query($conn, $query);
-
-if (mysqli_num_rows($result) > 0) {
-    while ($row = mysqli_fetch_assoc($result)) {
-        echo $row['sanpham'] . "<br>";
-    }
+if(isset($_GET['nhucau'])){
+    $query_nhucau = getSanPhamByString($conn,'nhucau');  
 }
-
+if(isset($_GET['ldt'])){
+    $query_ldt = getSanPhamByString($conn,'ldt');
+}
 
 
 mysqli_close($conn);
-?>
