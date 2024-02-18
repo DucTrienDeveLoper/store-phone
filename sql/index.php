@@ -1,6 +1,5 @@
 <?php
-include("../connect/index.php")
-
+include("../connect/index.php");
 function sqlQuery($tableName){
    global $conn;
    $data = array();
@@ -11,15 +10,15 @@ function sqlQuery($tableName){
         $data = $row;
     })
    }else {
-    die("0 results");
+    die("0 results"); 
    }
    return $data
 }
 
-function sqlQueryConditio($tableName, $condition){
+function sqlQueryCondition($tableName, $condition){
     global $conn;
     $data = array();
-    $sql = "SELECT * FROM $tableName WHERE  $condition";
+    $sql = "SELECT $i FROM $tableName WHERE  $condition";
     $result = $conn->query($sql);
     if($result ->num_row > 0){
      while($row = $result->fetch_assoc(){
@@ -30,7 +29,7 @@ function sqlQueryConditio($tableName, $condition){
     }
     return $data
  }
-
+ 
 
 
 ?>
