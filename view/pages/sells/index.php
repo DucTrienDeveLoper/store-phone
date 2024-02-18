@@ -2,7 +2,7 @@
 <html class="no-js" lang="zxx">
     
 <!-- index-331:38-->
-<head>
+    <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
         <title>Home Version Three || limupa - Digital Products Store ECommerce Bootstrap 4 Template</title>

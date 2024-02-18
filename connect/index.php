@@ -1,5 +1,5 @@
 <?php
- $conn = mysqli_connect('localhost','root','','mobile','3307');
+ $conn = mysqli_connect('localhost','root','','mobile');
  if($conn ->connect_error){
     die('die');
  }
