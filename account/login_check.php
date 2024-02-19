@@ -16,7 +16,7 @@ if ($num > 0) {
     $_SESSION['USER_NAME'] = $row['username'];
     ?>
     <script>
-        location.href = 'http://localhost/cuahangdienthoai/shoppingphp/frontendPHP/';
+        location.href = 'http://localhost/storephone/store-phone/frontendPHP/';
     </script>
     <?php
     // echo "found";
@@ -31,7 +31,7 @@ if ($nums > 0) {
     $_SESSION['USERNAME'] = $rows['username'];
 ?>
     <script>
-        location.href = 'http://localhost/cuahangdienthoai/shoppingphp/';
+        location.href = 'http://localhost/storephone/store-phone/';
     </script>
 <?php
 } else {
@@ -39,9 +39,9 @@ if ($nums > 0) {
     <script>
         var alert = confirm("<?php echo "sai thông tin đăng nhập"; ?>");
         if (alert == 1) {
-            location.href = 'http://localhost/cuahangdienthoai/shoppingphp/frontendPHP/login.php';
+            location.href = 'http://localhost/storephone/store-phone/account/login.php';
         } else {
-            location.href = 'http://localhost/cuahangdienthoai/shoppingphp/frontendPHP/login.php';
+            location.href = 'http://localhost/storephone/store-phone/account/login.php';
         }
     </script>
 <?php

@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -8,7 +9,7 @@
     <meta name="description" content="" />
     <meta name="author" content="" />
     <title>Login - SB Admin</title>
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="../css/style_login.css" rel="stylesheet" />
     <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
 </head>
 
@@ -21,10 +22,10 @@
                         <div class="col-lg-5">
                             <div class="card shadow-lg border-0 rounded-lg mt-5">
                                 <div class="card-header">
-                                    <h3 class="text-center font-weight-light my-4">Login</h3>
+                                    <h3 class="text-center font-weight-light my-4">Register for admin</h3>
                                 </div>
                                 <div class="card-body">
-                                    <form id="myForm" action="login_check.php" method="post" onsubmit="return validateForm()">
+                                    <form id="myForm" action="check.php" method="post" onsubmit="return validateForm()">
                                         <div class="form-floating mb-3">
                                             <!-- <input class="form-control" id="inputEmail" type="text" placeholder="name@example.com" /> -->
                                             <input type="text" class="form-control" placeholder="Username" id="username" name="username">
@@ -35,20 +36,17 @@
                                             <input type="password" class="form-control" placeholder="Password" id="password" name="password">
                                             <label for="inputPassword">Password</label>
                                         </div>
-                                        
-                                        <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
-                                            <a class="small" href="register.php">Need an account? Sign up!</a>
-                                            <input type="submit" class="btn btn-primary btn-block" name='submit_login' value="login">
+                                        <div>
+                                        <input type="submit" value="Submit">
                                         </div>
 
                                     </form>
-                                    
                                 </div>
                                 <script>
                                     function validateForm() {
                                         var username = document.getElementById('username').value;
                                         var password = document.getElementById('password').value;
-
+                                        
                                         var error = "";
 
                                         if (username === "") {
@@ -57,10 +55,10 @@
                                         if (password === "") {
                                             error += "password không có data.\n";
                                         }
-                                        if (password.lenght < 8 || password.lenght > 16) {
+                                        if(password.lenght < 8 || password.lenght > 16){
                                             error += "password sai định dạng từ 8 tới 16 ký tự";
                                         }
-
+                                      
                                         if (error !== "") {
                                             alert(error);
                                             return false;
@@ -75,7 +73,7 @@
                 </div>
             </main>
         </div>
-
+    
         <div id="layoutAuthentication_footer">
             <footer class="py-4 bg-light mt-auto">
                 <div class="container-fluid px-4">

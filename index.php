@@ -10,12 +10,13 @@ if (isset($_SESSION['USER_NAME'])) {
     echo $Username;
 }
 require "inc/header.php";
+// require "account/login.php";
 
 ?>
 
 
 <a href="logout.php">logout</a>
-<a href="frontendPHP/login.php">login</a>
+<a href="/account/login.php">login</a>
 <div class="slider-area">
 
     <div class="block-slider block-slider4">
