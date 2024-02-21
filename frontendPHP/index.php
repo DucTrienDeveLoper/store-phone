@@ -7,7 +7,7 @@
     // echo "Connected successfully"; 
    $query = "SELECT * FROM billday WHERE status = 2"; 
    if(!isset($_SESSION['USER_ID'])){
-    header("location:login.php");
+    header("location:../account/login.php");
     die();
    }
    
@@ -16,7 +16,7 @@
 require "../inc/header.php";
 
 ?>
- <a href="logout.php">logout</a>
+ <a href="../account/logout.php">logout</a>
 <div id="layoutSidenav_content">
 
     <main>
