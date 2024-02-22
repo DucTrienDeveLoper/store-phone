@@ -5,9 +5,8 @@
     <div class="block-slider block-slider4">
         <ul class="" id="bxslider-home4">
             <?php
-            $table = 'sanpham';
-            $codition = 'gia > 12000000';
-            $sql = sqlQueryCondition($table,$codition);
+            $query = "SELECT * FROM `sanpham` WHERE gia > 12000000 ";
+            $sql = sqlQueryCondition($query);
             // var_dump($sql);
 
             error_reporting(0);
@@ -47,9 +46,8 @@
                     <div id="product-carousel" class="product-carousel" style="display: flex;flex-wrap: nowrap">
 
                         <?php
-                        $table = 'sanpham';
-                        $codition = 'GIA < 9000000';
-                        $sql = sqlQueryCondition($table,$codition);
+                        $query = "SELECT * FROM `sanpham` WHERE gia < 9000000 ";
+                        $sql = sqlQueryCondition($query);
                         // var_dump($sql);
 
                         foreach ($sql as $array){
