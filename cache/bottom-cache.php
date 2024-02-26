@@ -9,32 +9,11 @@ if ($sql->num_rows > 0) {
 }
 
 
-// function themsanpham($id, $ten, $gia)
-// {
-//     global $array;
-//     $arrays = array(
-//         'id' => $id,
-//         'ten' => $ten,
-//         'gia' => $gia
-//     );
-//     $array[] = $arrays;
-//     // var_dump($array);
-// }
-// // var_dump($array);
-// if (count($array) > 0) {
-//     foreach ($array as $arrays) {
-//         $id = $arrays['idsp'];
-//         $ten = $arrays['tensp'];
-//         $gia = $arrays['gia'];
-//         themsanpham($id, $ten, $gia);
-//     }
-// }
-// echo "hello world";
+
 file_put_contents($cachefile, json_encode($array));
 
 
 error_reporting(0);
-// $cached = fopen($cachefile, 'w+');
 
 
 fclose($cachefile);
